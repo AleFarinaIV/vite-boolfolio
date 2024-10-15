@@ -27,7 +27,17 @@ export default {
           <h1 class="text-center">Elenco progetti</h1>
         </div>
         <div class="col-12">
-
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img class="card-img-top" src="">
+                <div class="card-body">
+                  <h4 class="card-title">Title</h4>
+                  <span>Lorem ipsum</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
