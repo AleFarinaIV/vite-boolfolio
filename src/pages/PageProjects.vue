@@ -47,7 +47,7 @@ export default {
           <h1 class="text-center">Elenco progetti</h1>
         </div>
         <div class="col-12">
-          <div class="row gy-4">
+          <div class="row gy-5">
             <ProjectCard v-for="proj in projects"
             :key="proj.id"
             :project="proj"/>
