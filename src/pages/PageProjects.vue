@@ -1,13 +1,14 @@
 <script>
 import axios from 'axios';
 import ProjectCard from '../components/ProjectCard.vue'
-
+import { store } from '../store.js';
 export default {
     data() {
         return {
             projects: [],
             current_page: null,
-            last_page: null
+            last_page: null,
+            store
         }
     },
     components: {
@@ -15,7 +16,7 @@ export default {
     },
     methods:{
       getAllProjects() {
-        axios.get('http://127.0.0.1:8000/api/projects')
+        axios.get(`${ store.apiUrl }/projects`)
         .then((response) => {
             this.projects = response.data.results.data;
             this.last_page = response.data.results.last_page;
@@ -24,7 +25,7 @@ export default {
       },
 
       goToPage(page) {
-        axios.get('http://127.0.0.1:8000/api/projects', { params: {page: page}})
+        axios.get(`${ store.apiUrl }/projects`, { params: {page: page}})
         .then((response)=> {
           this.projects = response.data.results.data;
           this.current_page = response.data.results.current_page;
