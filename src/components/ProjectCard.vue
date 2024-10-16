@@ -16,7 +16,7 @@ export default {
 
 <template>
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="card min-h">
+          <div class="card">
             <img class="card-img-top" :src="imageSrc">
             <div class="card-body">
               <h4 class="card-title">{{ project.name }}</h4>
