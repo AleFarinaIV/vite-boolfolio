@@ -26,20 +26,20 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 p-5">
-          <h1 class="text-center">Elenco progetti</h1>
-        </div>
-        <div class="col-12">
-          <div class="row gy-4">
-            <ProjectCard v-for="proj in projects"
-            :key="proj.id"
-            :project="proj"/>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 p-5">
+        <h1 class="text-center">Elenco progetti</h1>
+      </div>
+      <div class="col-12">
+        <div class="row gy-4">
+          <ProjectCard v-for="proj in projects"
+          :key="proj.id"
+          :project="proj"/>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss">
