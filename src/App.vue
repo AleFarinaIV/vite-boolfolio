@@ -6,9 +6,7 @@ import PageProjects from './pages/PageProjects.vue';
 export default {
   data() {
     return {
-      projects: [],
-      last_page: null,
-      current_page: null,
+
     }
   },
   components: {
@@ -24,9 +22,10 @@ export default {
 <template>
 
   <AppHeader/>
-
+  
   <main>
-    <PageProjects/>
+    <router-view></router-view>
+    <!-- <PageProjects/> -->
   </main>
 
 </template>
