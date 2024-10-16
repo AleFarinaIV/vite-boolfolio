@@ -52,12 +52,18 @@ export default {
             :project="proj"/>
           </div>
         </div>
-        <div class="col-12 d-flex justify-content-center p-4">
+        <div class="col-12 d-flex justify-content-center p-5">
             <nav aria-label="Page navigation example">
               <ul class="pagination">
-                <li class="page-item" :class="current_page == 1 ? 'disabled' : ''"><a class="page-link" href="#" @click="goToPage(current_page - 1)">Previous</a></li>
-                <li class="page-item" v-for="i in last_page"><a class="page-link" href="#" @click="goToPage(i)">{{ i }}</a></li>
-                <li class="page-item" :class="current_page == last_page ? 'disabled' : ''"><a class="page-link" href="#" @click="goToPage(current_page + 1)">Next</a></li>
+                <li class="page-item" :class="current_page == 1 ? 'disabled' : ''">
+                    <a class="page-link" href="#" @click="goToPage(current_page - 1); $event.target.blur()">Previous</a>
+                </li>
+                <li class="page-item" v-for="i in last_page">
+                    <a class="page-link" :class="current_page == i ? 'bg-primary text-white' : ''" href="#" @click="goToPage(i); $event.target.blur()">{{ i }}</a>
+                </li>
+                <li class="page-item" :class="current_page == last_page ? 'disabled' : ''">
+                    <a class="page-link" href="#" @click="goToPage(current_page + 1); $event.target.blur()">Next</a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -67,5 +73,9 @@ export default {
 </template>
 
 <style lang="scss">
+
+    .page-link:focus{
+        outline: none;
+    }
 
 </style>

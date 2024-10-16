@@ -16,10 +16,10 @@ export default {
                     </div>
                     <ul class="list-unstyled d-flex m-0">
                         <li class="me-3">
-                            <a href="">Home</a>
+                            <router-link :to="{ name: 'homepage' }">Home</router-link>
                         </li>
                         <li>
-                            <a href="">Projects</a>
+                            <router-link :to="{ name: 'projects' }">Projects</router-link>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +44,8 @@ export default {
         a {
             text-decoration: none;
             color: white;
-            font-size: 18px;
+            font-size: 14px;
+            font-weight: 500;
             &:hover {
                 color: grey;
             }
