@@ -47,14 +47,14 @@ export default {
                             </div>
                             <div class="col-4">
                                 <h2></h2>
-                                <iframe src="https://github.com/AleFarinaIV" height="200" width="250"></iframe>
+                                <!-- <iframe src="https://github.com/AleFarinaIV" height="200" width="250"></iframe> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="py-4 bg-success border rounded-5 text-white">
                     <div class="text-center pb-3">
-                        <h2>Mail</h2>
+                        <h2>Contattami subito!</h2>
                         <p class="lh-lg pt-2 px-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Iste eos facilis, vitae ducimus modi repudiandae optio 
