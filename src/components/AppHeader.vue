@@ -15,11 +15,14 @@ export default {
                         <!-- <img src="" alt="logo"> -->
                     </div>
                     <ul class="list-unstyled d-flex m-0">
-                        <li class="me-3">
+                        <li>
                             <router-link :to="{ name: 'homepage' }">Home</router-link>
                         </li>
-                        <li>
+                        <li class="mx-3">
                             <router-link :to="{ name: 'projects' }">Projects</router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{ name: 'contacts' }">Contacts</router-link>
                         </li>
                     </ul>
                 </div>
